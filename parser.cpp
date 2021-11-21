@@ -42,6 +42,8 @@ double Parser::RecursiveRef(MainWindow* MainWindow, QTableWidgetItem* item, QTab
             //e.g A2, B4
             string refCellCoordinates = line_str[i]+row;
 
+
+            //A0
             if(entranceTable[hash<string>{}(thisCellCoordinate)%100][hash<string>{}(refCellCoordinates)%100] == true) {
                 return CODE_NUMBER_FOR_CYCLE;
             }
